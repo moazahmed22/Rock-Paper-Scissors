@@ -5,6 +5,7 @@ const player2Choice = document.getElementById("player2Choice");
 const score = document.getElementById("score");
 const flag = document.getElementById("flag");
 const result = document.getElementById("result");
+const playAgain = document.getElementById("again");
 
 let p2choice;
 let gameRunning = true;
@@ -12,6 +13,7 @@ let player1Score = 0, player2Score = 0;
 //some Audio
 let music = new Audio("./music/chika dance.mp3");
 music.loop = "true";
+music.volume = 0.5;
 audioPlaying = false;
 const playAudio = () => {
     audioPlaying = audioPlaying ? false : true;
@@ -100,18 +102,29 @@ const game = p1Choice => {
             }
             score.textContent = `${player1Score}:${player2Score}`
         }
-    }
-    //validation to stop the game when each of the players reaches a score of 3
-    if (player1Score > 2 || player2Score > 2) {
-        gameRunning = false;
-        if (player1Score > player2Score) {
-            result.style.color = `hsl(160, 55%, 55%)`;
-            result.innerHTML = `Human Wins 🎉🎉✨🎊<img src="./pics/chikaDance.gif">`;
-        }
-        else {
-            result.style.color = `Red`;
-            result.textContent = `A bot just beat you 🗿`;
+        //validation to stop the game when each of the players reaches a score of 3
+        if (player1Score > 2 || player2Score > 2) {
+            gameRunning = false;
+            if (player1Score > player2Score) {
+                result.style.color = `hsl(160, 55%, 55%)`;
+                result.innerHTML = `Human Wins 🎉🎉✨🎊<img src="./pics/chikaDance.gif">`;
+            }
+            else {
+                result.style.color = `Red`;
+                result.textContent = `A bot just beat you 🗿`;
+            }
+            playAgain.style.visibility = "visible";
         }
     }
 
+}
+const newGame = () => {
+    player1Choice.removeAttribute("src");
+    player2Choice.removeAttribute("src");
+    player1Score = 0;
+    player2Score = 0;
+    gameRunning = true;
+    playAgain.style.visibility = "hidden";
+    result.innerHTML = ``;
+    score.textContent = `0:0`
 }
