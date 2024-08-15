@@ -1,4 +1,5 @@
 let arrOfChoice = ['rock', 'paper', 'scissors'];
+let counter = 0;
 
 const player1Choice = document.getElementById("player1Choice");
 const player2Choice = document.getElementById("player2Choice");
@@ -126,5 +127,6 @@ const newGame = () => {
     gameRunning = true;
     playAgain.style.visibility = "hidden";
     result.innerHTML = ``;
+    flag.textContent = `Round #${++counter}`;
     score.textContent = `0:0`
 }
