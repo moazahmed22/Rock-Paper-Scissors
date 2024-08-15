@@ -14,7 +14,7 @@ let player1Score = 0, player2Score = 0;
 //some Audio
 let music = new Audio("./music/chika dance.mp3");
 music.loop = "true";
-music.volume = 0.5;
+music.volume = 0.25;
 audioPlaying = false;
 const playAudio = () => {
     audioPlaying = audioPlaying ? false : true;
@@ -127,6 +127,7 @@ const newGame = () => {
     gameRunning = true;
     playAgain.style.visibility = "hidden";
     result.innerHTML = ``;
+    flag.style.color = `hsl(160, 55%, 55%)`;
     flag.textContent = `Round #${++counter}`;
     score.textContent = `0:0`
 }
