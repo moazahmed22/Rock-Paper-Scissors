@@ -1,0 +1,93 @@
+body{
+    margin: 20px;
+    background-color: hsl(0, 0%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.optional{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    height: 80px;
+}
+#container{
+    margin: auto;
+    width: 80%;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+#imgContainer{
+    width: 250px;
+    height: 250px;
+    border: 5px solid hsl(160, 55%, 55%);
+}
+#imgContainer img{
+    margin: 10px;
+}
+
+.miniContainer{
+    padding: 12px;
+    width: 356px;
+    height: 324px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 85px;
+}
+.iconContainer{
+    padding-top: 80px;
+    width: 90px;
+    height: 312px;
+    margin-right: 85px;
+}
+
+#btnContainer{
+    width: 100%;
+    display: flex;
+    margin-top: 22px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.miniContainer button{
+    font-size: 16px;
+    font-family: sans-serif;
+    min-width: 30%;
+    color: hsl(0, 0%, 100%);
+    height: 40px;
+    background-color: hsl(0, 0%, 15%);
+    border: 1px solid hsl(160, 55%, 55%);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#score{
+    margin: 0px;
+    font-size: 128px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 164px;    
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsl(160, 55%, 55%);
+    transition: .5s background-color;
+}
+#player2{
+    margin: 0px;
+}
+#audio{
+    font-size: 2em;
+    background-color: hsl(0, 0%, 15%);
+    border: none;
+}
+#audio:hover{
+    background-color: hsl(0, 0%, 5%);
+}
+#audio:active{
+    background-color: hsl(0, 0%, 25%);
+}

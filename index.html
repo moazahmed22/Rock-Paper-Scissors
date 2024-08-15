@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="optional" id="flag">
+        
+    </div>
+    
+    <div id="container">
+        <div class="miniContainer" id="player1">
+            <div id="imgContainer">
+                <img src="./pics/lofi-girl-1.png" alt="player1">
+            </div>      
+           <div id="btnContainer">
+            <button id="rockBtn" onclick="game('rock')" name="Rock">Rock</button>
+            <button id="paperBtn" onclick="game('paper')" name="Paper">Paper</button>
+            <button id="scissorsBtn" onclick="game('scissors')" name="Scissors">Scissors</button>
+           </div> 
+        </div>
+
+        <div class="iconContainer">
+            <img id="player1Choice" src="" alt="">
+        </div>
+
+        <div class="miniContainer">
+            <p id="score">0:0</p>
+        </div>
+
+        <div class="iconContainer">
+            <img id="player2Choice" src="" alt="">
+        </div>
+
+        <div class="miniContainer" id="player2">
+            <div id="imgContainer">
+                <img src="./pics/lofi-girl-2.png" alt="player1">
+            </div>
+        </div>
+    </div>
+
+    <div class="optional" id="result">
+        
+    </div>
+<button onclick="playAudio();" id="audio">🔉</button>
+    <script src="./index.js"></script>
+</body>
+</html>
